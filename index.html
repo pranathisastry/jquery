@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Jquery website Using Facebook Graph Api Token Generaion</title>
+  <!--MATERIALIZE CSS-->
+  <link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet">
+    <!--Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <meta charset="utf-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--CSS -->
+  <style type="text/css">
+  #url{
+  }
+  #myProgress {
+  width: 100%;
+  background-color: #FF69B4;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: orange;
+}
+  
+#facebook{
+  cursor: pointer;
+}
+  #background{
+    background-color: #000080;
+    padding-top: 1px;   
+  }
+
+  * {
+  box-sizing: border-box;
+}
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 25%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding-top: 2px; 
+}
+
+  #feedpage{
+      font-family: sans-serif;
+      font-style: oblique;
+      font-size: 0.67em;
+      text-align: center;
+    }
+
+ #profilepage{
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 0.67em;
+    text-align: center;
+  }
+  .top{
+      font-family: sans-serif;
+      color:#F5FFFA ;
+    }
+    
+  </style>
+  
+  
+</head>
+<body>
+ 
+
+  <div class="container-fluid" id="background" >
+      <h4 class="top"> Facebook
+      </h4>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search " title="Type in a name">
+      
+      <div class="loader" id="myProgress">
+      <div id="myBar"></div> 
+      </div>
+  </div>
+    
+
+   <div class="container-fluid">
+      <div class="row">
+            </div>
+      <div class="col-s12" id="profilepage"><span class="flow-text" >
+      <button class="btn btn-secondary" type="button" id="facebook" >Click to display Profile Page</button>      
+       <input id="url" type="text" class="form-control" placeholder="enter URL" aria-label="enter URL">
+    </div>
+   </div>
+        <ul>
+        <li>NAME:<a id="name" href="#"></a>
+        <li>EMAIL:<a id="email" href="#"></a>
+        <li>PROFILE ID:<a id="profileID" href="#"></a>
+        <li>HOMETOWN:<a id="hometown" href="#"></a>
+        <li>AGE:<a id="age" href="#"></a>
+        </ul></div>
+        <span>
+    </div>
+ 
+  
+ <div class="container-fluid">
+      <div class="row">
+            </div>
+      <div class="col s12" id="feedpage"><span class="flow-text" >
+      <button class="btn btn-secondary" type="button" id="facebook" > My News Feed</button>     
+      <div class="divider" id="1"></div>
+        <div class="section">
+            <h1 >Feed Page</h1>
+              <p class="myposts">Recent Posts</p>
+        </div>
+               
+ </div>
+       
+        
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="fbapi.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+  
+</body>
+</html>
